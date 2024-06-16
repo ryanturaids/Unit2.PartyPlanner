@@ -55,6 +55,10 @@ async function getEvents() {
 // add event
 async function addEvent(event) {
   event.preventDefault();
+  const dateValue = addEventForm.date.value
+  const timeValue = addEventForm.time.value
+  const dateTime = `${dateValue}T${timeValue}`
+  const isoDate = new Date(dateTime).toISOString();
   try {
     const response = await fetch(apiURL, {
       method: 'POST',
@@ -63,7 +67,7 @@ async function addEvent(event) {
         name: addEventForm.name.value,
         description: addEventForm.description.value,
         location: addEventForm.location.value,
-        date: new Date(addEventForm.date.value).toISOString()
+        date: isoDate
       })
     })
     if (!response.ok) {
