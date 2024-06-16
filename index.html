@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+  </head>
+  <body>
+    <form id="addEvents">
+      <label>
+        <span>Event Name</span>
+        <input type="text" name="name"/>
+      </label>
+      <label>
+        <span>Event Description</span>
+        <input type="text" name="description"/>
+      </label>
+      <label>
+        <span>Even Location</span>
+        <input type="text" name="location"/>
+      </label>
+      <label>
+        <span>Even Date/Time</span>
+        <input type="text" name="date" placeholder="1/1/2024, 12:00:00 AM"/>
+      </label>
+      <button type="submit">Add Event</button>
+    </form>
+    <ul id="events"></ul>
+  </body>
+</html>
+
+
+
+<!-- 
+{
+    id: 1,
+    name: "Event Name",
+    description: "This is a description of the event.",
+    date: "2021-09-30T00:00:00.000Z", // Date ISO string
+    location: "123 Street"
+  }
+-->
